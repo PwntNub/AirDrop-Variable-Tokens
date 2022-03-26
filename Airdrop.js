@@ -139,6 +139,8 @@ async function main() {
 
                 var allHoldings = 0
                 for (c in snapshot) {
+                    if (blackList.includes(snapshot[c].account)) continue
+
                     if (snapshot[c].currency == hex) {
 
                         allHoldings += Math.abs((Number(snapshot[c].balance)))
@@ -148,6 +150,7 @@ async function main() {
                 console.log(`\nA Total Of ${allHoldings} of $${name} is Circulating`)
 
                 for (d in snapshot) {
+                    if (blackList.includes(snapshot[d].account)) continue
 
                     if (snapshot[d].currency == hex) {
 
