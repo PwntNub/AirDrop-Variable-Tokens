@@ -102,6 +102,7 @@ async function main() {
         try{
             var wallet = xrpl.Wallet.fromSeed(current.seedOfWallet)
         } catch (err){
+            console.log(`\nAn Invalid Seed Was Supplied, Deriving Wallet As A Mnemomic Input\nPlease confirm your address is correct`)
             var wallet = xrpl.Wallet.fromMnemonic(current.seedOfWallet)
         }
         var ADobj = {}
