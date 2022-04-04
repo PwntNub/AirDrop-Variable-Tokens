@@ -98,12 +98,16 @@ async function main() {
         var memohex = xrpl.convertStringToHex(current.memo)
         var blackList = current.blackList
 
-        var wallet = xrpl.Wallet.fromSeed(current.seedOfWallet)
-
+        //tries to get wallet from seed, if not gets from mnemonic
+        try{
+            var wallet = xrpl.Wallet.fromSeed(current.seedOfWallet)
+        } catch (err){
+            var wallet = xrpl.Wallet.fromMnemonic(current.seedOfWallet)
+        }
         var ADobj = {}
 
-        console.log(`\n\n<<<< CONDUCTING AD ${a} FOR A TOTAL OF ${total} $${name} >>>>\nFROM ADDRESS: ${wallet.classicAddress}\nYOU HAVE 10 SECONDS TO CONFIRM THESE DETAILS ARE CORRECT`)
-        await wait(10)
+        console.log(`\n\n<<<< CONDUCTING AD ${a} FOR A TOTAL OF ${total} $${name} >>>>\nFROM ADDRESS: ${wallet.classicAddress}\nYOU HAVE 20 SECONDS TO CONFIRM THESE DETAILS ARE CORRECT`)
+        await wait(20)
         console.log(`PROCEEDING`)
 
         //If data from previous run exists, use that, if not compile snapshot according to data set in config file
