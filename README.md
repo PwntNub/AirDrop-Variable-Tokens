@@ -26,7 +26,7 @@ The user can define numerous variables within the config file.
 12) ledgerOfSnapshot: If 'snapShotnow' is false, this can be used to enter the desired Ledger Sequence to take a snapshot in
 13) suppliedAccounts: Boolean, set as 'true', if the user has a set designation of accounts to send to
 14) pathToJsonArrayOfAddresses: If relevant, the path to the locally stored JSON array of account to send the airdrop to
-15) seedOfWallet: Seed of the XRPL wallet holding the funds
+15) seedOfWallet: Seed of the XRPL wallet holding the funds. A valid mnemonic can be supplied instead, (refer to https://js.xrpl.org/classes/Wallet.html#fromMnemonic). Input the words with relevant capitalisation, seperated by blank spaces.
 16) memo: The memo that the user wishes to add, must be under 1000 characters
 17) saveFrequency: How often (amount of transactions) the user wishes to save progress, smaller numbers mean less chance of double-spending in the event of a system malfunction, larger values means the airdrop is conducted faster
 18) blackList: An array of blacklisted accounts (team accounts)
