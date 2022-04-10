@@ -5,16 +5,16 @@
     "retrymax": 5,
     "tokens": [
         {
-            "name": "CGT",
+            "name": "XVR",
             "hex": "",
-            "issuer": "rp4KDV51A5dW6aySXgQkRUKnHVjFF2PQwr",
+            "issuer": "rRCA6gnPkvpKmWwfcYxHQ845gFQ5ThYQe",
             "total": "0",
             "holdersAD": true,
-            "snapShotnow": false,
+            "snapShotnow": true,
             "ledgerOfSnapshot": "",
             "suppliedAccounts": false,
             "pathToJsonArrayOfAddresses": "",
-            "seedOfWallet": "",
+            "seedOfWallet": "TEMP",
             "memo": "Welcome",
             "saveFrequency": 100,
             "blackList": []
